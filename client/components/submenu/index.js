@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
+import { inc } from '../../actions/demoActions'
 
 import routes from 'client/routes';
 
@@ -14,6 +15,8 @@ class Element extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
   handleClick = (item, key, keyPath) => {
+	  console.log('clicked')
+	  this.props.dispatch(inc())
   }
   render() {
 		return (
@@ -25,7 +28,7 @@ class Element extends Component {
 			style={{padding: '0 10%'}}>
 				<SubMenu title={<span><Icon type="appstore"/>Home</span>}>
 					<Menu.Item key="home:feed1">User</Menu.Item>
-					<Menu.Item key="home:feed2">Object</Menu.Item>
+					<Menu.Item onclick={this.handleClick}key="home:feed2">Object</Menu.Item>
 				</SubMenu>
 				<SubMenu title={<span><Icon type="appstore" />User</span>}>
 					<Menu.Item key="user:profile">Profile</Menu.Item>

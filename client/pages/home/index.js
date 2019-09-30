@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, Switch } from 'react-router-dom';
-import { Affix, Layout, Row} from 'antd';
+import { Affix, Layout, Row, Button} from 'antd';
 const { Content } = Layout;
 
 import Header from 'client/components/header';
 import Submenu from 'client/components/submenu';
 import Footer from 'client/components/footer'
 import RouteWithSubRoutes from 'client/routeWithSubRoutes';
+import {inc} from '../../actions/demoActions' 
 
 import './home.css';
 
 class Element extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = { activeTab: 0 };
+  }
+  postData = ()=>{
+    this.props.dispatch(inc({stuff: 'dattttaaaaaa'}))
+}
   render() {
     const {
       location,
@@ -27,21 +34,7 @@ class Element extends Component {
         </Affix>
         <Content className='bg_color_grey_light' style={{padding:'0px 10%', minHeight: 800}}>
             <Row>
-              Sub Routes of /:
-              <ul>
-                {
-                  routes && routes.length && routes.map(function(route,i){
-                    return (<li key={i}><Link to={`${route.path}`}>{route.path}</Link></li>);
-                  })
-                }
-              </ul>
-              <Switch>
-              {
-                  routes && routes.length && routes.map((route, i) => ( 
-                    <RouteWithSubRoutes key = { i } {...route }/>
-                  ))
-              } 
-              </Switch>
+             <Button onClick={this.postData}>stuff</Button>
             </Row>
         </Content>
         <Footer/>
@@ -49,5 +42,7 @@ class Element extends Component {
     );
   }
 }
-
-export default connect(null)(Element);
+const mapStateToProps = state => ({
+  ...state
+ })
+export default connect(mapStateToProps)(Element);

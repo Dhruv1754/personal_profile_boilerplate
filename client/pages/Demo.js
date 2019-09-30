@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Link, Switch } from 'react-router-dom';
-import { Layout, Row } from 'antd';
+import { Layout, Row, Button } from 'antd';
 import RouteWithSubRoutes from 'client/routeWithSubRoutes';
 
 class Element extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = { counter: 0 };
+  }
+  postData = ()=>{
+    this.props.dispatch(inc())
+}
   render() {
     const {
       routes
@@ -13,20 +19,8 @@ class Element extends Component {
     return (
       <Layout>
         <Row style={{paddingLeft:'50px'}}>
-          <ul>
-            {
-              routes && routes.length && routes.map(function(route,i){
-                return (<li key={i}><Link to={`${route.path}`}>{route.path}</Link></li>);
-              })
-            }
-          </ul>
-          <Switch>
-          {
-              routes && routes.length && routes.map((route, i) => ( 
-                <RouteWithSubRoutes key = { i } {...route }/>
-              ))
-          } 
-          </Switch>
+          <Button>increment</Button>
+
         </Row>
       </Layout>
     );
