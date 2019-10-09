@@ -1,21 +1,29 @@
 import {
-  COUNTER_INC,
-  COUNTER_DEC
+  SIMPLE_ACTION1,
+  SIMPLE_ACTION2
+
 } from 'client/actions/demoActions';
 
-const InitState = 0;
+const InitState = null;
 
-export default function counter(state = InitState, action) {
+export function stuff(state = InitState, action) {
 
   switch (action.type) {
-    case COUNTER_INC:
-      return state + 1;
-
-    case COUNTER_DEC:
-      return state - 1;
+    case SIMPLE_ACTION1:
+      return action.payload ;
 
     default:
       return state;
   }
+}
 
+export function otherStuff(state = InitState, action) {
+
+  switch (action.type) {
+    case SIMPLE_ACTION2:
+      return action.payload ;
+
+    default:
+      return state;
+  }
 }

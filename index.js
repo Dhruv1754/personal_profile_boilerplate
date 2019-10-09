@@ -11,7 +11,6 @@ require.extensions['.css'] = () => {
  */
 var app = require('server/app');
 var http = require('http');
-var models = require('server/models');
 var config = require('server/config');
 var console = require('server/libs/logger');
 /**
@@ -25,16 +24,15 @@ app.set('port', port);
  */
 var server = http.createServer(app);
 
-models.sequelize.sync({ force: false }).then(function() {
+
     /**
      * Listen on provided port, on all network interfaces.
      */
-    server.listen(port, function() {
+server.listen(port, function() {
         console.info('Express server listening on port ' + server.address().port + " on " + process.env.NODE_ENV + " mode");
     });
-    server.on('error', onError);
-    server.on('listening', onListening);
-});
+server.on('error', onError);
+server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.

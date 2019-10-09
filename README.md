@@ -50,4 +50,4 @@ Important technologies used
 
 ### Template
 ----------
-This template is for making personal portfolio websites also with backend which is for learning purposes mainly.
+This template is for making any web applications also with backend which is for learning purposes mainly.

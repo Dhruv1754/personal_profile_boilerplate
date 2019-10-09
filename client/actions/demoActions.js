@@ -1,29 +1,39 @@
 import callApi from './apiCaller.js'
 
-export const COUNTER_INC = 'COUNTER_INC';
-export const COUNTER_DEC = 'COUNTER_DEC';
+export const SIMPLE_ACTION1 = 'SIMPLE_ACTION1';
+export const SIMPLE_ACTION2 = 'SIMPLE_ACTION2';
 
 export function inc(data) {
   return (dispatch) =>
      {     
       return callApi('backend_call','post',data).then(res=>{
       
-      console.log('data got back', res.data)
+      dispatch(simpleAction1(res.data))
       });
      }
  }
 
-export const dec = () => ({
-  type: COUNTER_DEC,
-})
+ export const simpleAction1 = (data) => dispatch => {
+  dispatch({
+   type: 'SIMPLE_ACTION1',
+   payload: data
+  })
+ }
 
-export function stuff(data) {
+
+ export function dec(data) {
   return (dispatch) =>
-     {
-          
+     {     
       return callApi('backend_call','post',data).then(res=>{
-         
-         dispatch(simpleAction(res.data))
+      
+      dispatch(simpleAction2(res.data))
       });
      }
-}
+ }
+
+ export const simpleAction2 = (data) => dispatch => {
+  dispatch({
+   type: 'SIMPLE_ACTION2',
+   payload: data
+  })
+ }

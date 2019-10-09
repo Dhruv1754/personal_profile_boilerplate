@@ -5,18 +5,13 @@ let {PythonShell} = require('python-shell')
  * @returns void
  */
 function getGITInfo(req, res) {
-    // Query
-    //var spawn = require("child_process").spawn;
-
-    //var process = spawn('py',["./my_script.py"] );
+npm 
     console.log("reached controller");
-// Takes stdout data from script which executed
-// with arguments and send this data to res object
-    //process.stdout.on('data', function(data) {
+
 
     
     return res.send({data:"stuff seasonality"})
-//})
+
 }
 
 module.exports= getGITInfo
