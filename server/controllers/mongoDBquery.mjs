@@ -1,9 +1,6 @@
 
 const MongoClient = require('mongodb').MongoClient;
 
-/
-
-
 
 /**
  * @param req
