@@ -3,7 +3,7 @@ import callApi from './apiCaller.js'
 export const SIMPLE_ACTION1 = 'SIMPLE_ACTION1';
 export const SIMPLE_ACTION2 = 'SIMPLE_ACTION2';
 
-export function inc(data) {
+export function getMongoData(data) {
   return (dispatch) =>
      {     
       return callApi('backend_call','post',data).then(res=>{

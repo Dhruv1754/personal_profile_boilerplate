@@ -1,9 +1,9 @@
 var config = require('server/config');
 var express = require('express');
-var getGITInfo2 =require('../controllers/projectsControl.mjs');
+var getMongoInfo =require('../controllers/mongoDBquery.mjs');
 
 var router = express.Router();
 
-router.use('/backend_call', getGITInfo2);
+router.use('/backend_call', getMongoInfo);
 
 module.exports = router;

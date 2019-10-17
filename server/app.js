@@ -7,9 +7,6 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import expressValidator from 'express-validator';
 import exphbs from 'express-handlebars';
-import jwt from 'jsonwebtoken';
-import moment from 'moment';
-import request from 'request';
 import webpack from 'webpack';
 import rfs from 'rotating-file-stream';
 
@@ -76,19 +73,6 @@ app.use(cookieParser());
 app.use('/public',express.static(path.join(__dirname, 'public')));
 
 
-app.use(function(req, res, next) {
-    global.navigator = global.navigator || {};
-    global.navigator.userAgent = req.headers['user-agent'] || 'all';
-    req.isAuthenticated = function() {
-        var token = (req.headers.authorization && req.headers.authorization.split(' ')[1]) || req.cookies.token;
-        try {
-            return jwt.verify(token, process.env.TOKEN_SECRET);
-        } catch (err) {
-            return false;
-        }
-    };
-    next();
-});
 
 if (app.get('env') === 'development') {
     var compiler = webpack(ClientConfig);

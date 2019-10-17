@@ -48,6 +48,23 @@ Important technologies used
 * To clean previously built assets
  	>npm run clean
 
-### Template
+### Template Page 1
 ----------
-This template is for making any web applications also with backend which is for learning purposes mainly.
+This includes an Antd Form with redux integrated which can communicate to back end edit mongo db hosted at your choice of url.
+
+
+*Adding UX component in front end to communicate to back end
+
+
+
+*Requirements needed to Add Mongo Db to the controller
+	-Mongo DB connection URI. You can easily get a free cloud mongo db at https://cloud.mongodb.com. Follow the exact steps after making free account.
+	
+	-Now install node module
+	>npm install mongodb -save
+
+	-Use Example code in server\controllers\mongoDBquery.mjs
+	This query will just query the collection "test_collection" inside db "test" inside my db
+
+	-For more reference queries for mongo I found https://www.w3schools.com/nodejs/nodejs_mongodb.asp
+	use full.

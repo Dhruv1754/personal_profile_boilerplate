@@ -13,11 +13,15 @@ const store = configureStore();
 const history = syncHistoryWithStore(createBrowserHistory(), store)
 import 'font-awesome/css/font-awesome.css';
 import 'antd/dist/antd.min.css';
+import ErrorBoundary from './errorLogging'
+
 
 render((
     <Provider store={store}>
         <Router history={history}>
+        <ErrorBoundary>
             <App/>
+            </ErrorBoundary>
         </Router>
     </Provider>
 ), document.getElementById('app'));

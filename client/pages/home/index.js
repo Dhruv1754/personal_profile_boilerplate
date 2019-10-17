@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, Switch } from 'react-router-dom';
+
 import { Affix, Layout, Row, Button} from 'antd';
 const { Content } = Layout;
 
 import Header from 'client/components/header';
-import Submenu from 'client/components/submenu';
-import Footer from 'client/components/footer'
-import {inc,dec} from '../../actions/demoActions' 
+import Footer from 'client/components/footer';
+import WrappedAdvancedSearchForm from 'client/components/MongoForm';
+import {inc,dec} from '../../actions/demoActions' ;
 
 import './home.css';
 
@@ -28,25 +28,24 @@ postData1 = ()=>{
   })
 }
   render() {
-    const {
-      location,
-      routes
-    } = this.props;
+
 
     return (
+      <div className="demo-big-content">
       <Layout>
-        <Affix>
-          <Header/>
-          <Submenu/>
+      <Affix>
+          <Header scroll>
+            
+          </Header>
         </Affix>
-        <Content className='bg_color_grey_light' style={{padding:'0px 10%', minHeight: 800}}>
-            <Row>
-             <Button onClick={this.postData}>stuff</Button>
-             <Button onClick={this.postData1}>stuff2222</Button>
-            </Row>
-        </Content>
-        <Footer/>
+          <Content className='bg_color_grey_light' style={{padding:'0px 10%', minHeight: 800}}>
+           
+              <WrappedAdvancedSearchForm />
+            
+          </Content>
+          <Footer></Footer>
       </Layout>
+      </div>
     );
   }
 }
