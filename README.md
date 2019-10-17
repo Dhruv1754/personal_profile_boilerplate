@@ -64,7 +64,7 @@ This includes an Antd Form with redux integrated which can communicate to back e
 	>npm install mongodb -save
 
 	-Use Example code in server\controllers\mongoDBquery.mjs
-	This query will just query the collection "test_collection" inside db "test" inside my db
+	This query will just query the collection "test_collection" inside db "test" inside my db at the respective URI provided by mongo db
 
 	-For more reference queries for mongo I found https://www.w3schools.com/nodejs/nodejs_mongodb.asp
 	use full.
