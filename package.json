@@ -76,7 +76,6 @@
     "redux-thunk": "^2.2.0",
     "request": "^2.81.0",
     "rotating-file-stream": "^1.4.4",
-    "sequelize": "^6.0.0",
     "tracer": "^0.8.9",
     "webpack-merge": "^4.2.2"
   }
