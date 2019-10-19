@@ -2,7 +2,7 @@ import { render } from 'react-dom';
 import React from 'react';
 import App from 'client/app';
 import { createBrowserHistory } from 'history';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { syncHistoryWithStore } from 'react-router-redux'
 import 'whatwg-fetch';
 

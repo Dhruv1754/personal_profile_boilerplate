@@ -96,7 +96,7 @@ app.get('*', (req, res) => {
     let html = renderToString(
         <Provider store={store}>
             <Router context={{}} location={req.url}>
-                <ClientApp/>
+                
             </Router>
         </Provider>
     );
