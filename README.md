@@ -7,14 +7,12 @@
 This boilerplate has following feature:
 
  * Universal React rendering
- * Webpack 2 for client side transformation and bundling
  * Babel js for server side transformation
  * import using absolute path in client and server for make code reuse easier
  * development hot reloading
- * Sequelize Js for backend api(for RDBMS)
+ * Mongodb Js for backend api(for No-Sql)
  * using ui framework ant.design
- * latest webpack 2 (2.5+)
- * latest React Router 4
+ * latest React Router 5
  * express-handlebars for server side templating
  * custom console logger for better log visibility & trace
  * nested route on react router 4 supported in server and client
@@ -24,10 +22,10 @@ This boilerplate has following feature:
 Important technologies used
 * [Node Js](https://nodejs.org/en/)
 * [Express Js](https://expressjs.com/)
-* [React Js](https://github.com/reactjs) version 15.1
-* [React Router](https://github.com/ReactTraining/react-router) version 4+
-* [React Redux](https://github.com/reactjs/react-redux) version 5+
-* [Ant Design](https://ant.design) version 2.5+
+* [React Js](https://github.com/reactjs) version 16.10
+* [React Router](https://github.com/ReactTraining/react-router) version 5+
+* [React Redux](https://github.com/reactjs/react-redux) version 7+
+* [Ant Design](https://ant.design) version 3.2+
 * [Babel Js](https://babeljs.io/) core version 6.24
 * [Webpack](https://webpack.js.org/) version 2.5+
 
