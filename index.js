@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 require('app-module-path').addPath(__dirname);
 // ES6 Transpiler
-require('babel-core/register');
+require('babel-register');
 require('babel-polyfill');
 require.extensions['.css'] = () => {
     return;

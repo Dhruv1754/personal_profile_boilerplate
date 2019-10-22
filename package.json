@@ -18,6 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "6.24.1",
+
     "babel-eslint": "^7.2.3",
     "babel-loader": "7.0.0",
     "babel-plugin-antd": "0.5.1",
@@ -29,6 +30,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.24.1",
     "babel-runtime": "6.23.0",
+    "babel-register": "6.24.0",
     "css-loader": "^3.2.0",
     "eslint": "^4.18.2",
     "eslint-plugin-babel": "4.1.1",
