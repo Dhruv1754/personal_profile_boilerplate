@@ -1,5 +1,5 @@
 {
-    "title": "My App",
-    "host": "www.example.com",
-    "port": 80
+    "title": "MERN example",
+    "host": "localhost",
+    "port": 81
 }

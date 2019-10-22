@@ -15,7 +15,7 @@ This boilerplate has following feature:
  * latest React Router 5
  * express-handlebars for server side templating
  * custom console logger for better log visibility & trace
- * nested route on react router 4 supported in server and client
+ * nested route on react router 5 supported in server and client
 
 ### Technologies
 ----------

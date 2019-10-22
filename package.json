@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Dhruv1754.github.io/web_application_boilerplate",
   "name": "react-redux-universal",
   "version": "0.1.0",
   "private": false,
@@ -7,7 +8,9 @@
     "clean": "rimraf server/public/*/*.*",
     "start": "npm run clean && cross-env NODE_ENV=development node index.js",
     "build": "npm run clean && webpack --config ./client/webpack.production --progress && npm run serve",
-    "serve": "cross-env NODE_ENV=production node index.js"
+    "serve": "cross-env NODE_ENV=production node index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git"
@@ -33,6 +36,7 @@
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "0.11.1",
+    "gh-pages": "^2.1.1",
     "lodash": "^4.17.15",
     "rimraf": "2.6.1",
     "style-loader": "0.17.0",
