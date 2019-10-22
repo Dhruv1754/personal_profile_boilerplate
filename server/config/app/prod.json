@@ -1,5 +1,5 @@
 {
     "title": "MERN example",
     "host": "localhost",
-    "port": 81
+    "port": 8080
 }
