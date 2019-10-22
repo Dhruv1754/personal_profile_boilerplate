@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Form, Row, Col, Input, Button, Icon } from 'antd';
+import { Form, Row, Col, Input, Button, PageHeader ,Icon} from 'antd';
 
 import {getMongoData} from '../../actions/demoActions' ;
 
@@ -18,7 +18,7 @@ class AdvancedSearchForm extends React.Component {
     const children = [];
     
       children.push(
-        <Col span={8} key={0} style={{ display: 1 < count ? 'block' : 'none' }}>
+        <Col span={7} offset={1}key={0} style={{ display: 1 < count ? 'block' : 'none' }}>
           <Form.Item label={`No-Sql Query`}>
             {getFieldDecorator(`query`, {
               rules: [
@@ -33,7 +33,7 @@ class AdvancedSearchForm extends React.Component {
       );
 
       children.push(
-        <Col span={8} key={1} style={{ display: 1 < count ? 'block' : 'none' }}>
+        <Col span={7} key={1} style={{ display: 1 < count ? 'block' : 'none' }}>
           <Form.Item label={`User Name`}>
             {getFieldDecorator(`user`, {
               rules: [
@@ -48,7 +48,7 @@ class AdvancedSearchForm extends React.Component {
       );
 
       children.push(
-        <Col span={8} key={2} style={{ display: 2 < count ? 'block' : 'none' }}>
+        <Col span={7} key={2} style={{ display: 2 < count ? 'block' : 'none' }}>
           <Form.Item label={`Password`}>
             {getFieldDecorator(`pass`, {
               rules: [
@@ -87,18 +87,17 @@ class AdvancedSearchForm extends React.Component {
   render() {
     return (
       <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
+        <Row><PageHeader style={{border: '1px solid rgb(235, 237, 240)',}}title={<div>This is a basic Redux AntD Form to query a Mongo DB with a user and password. To see how click on the Icon on the right --->   
+        <a href="https://github.com/Dhruv1754/web_application_boilerplate"><Icon type="github" /></a></div>}></PageHeader></Row>
         <Row gutter={24}>{this.getFields()}</Row>
         <Row>
-          <Col span={24} style={{ textAlign: 'right' }}>
+          <Col span={23} style={{ textAlign: 'right' }}>
             <Button type="primary" htmlType="submit">
               Search
             </Button>
             <Button style={{ marginLeft: 8 }} onClick={this.handleReset}>
               Clear
             </Button>
-            <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-              Collapse <Icon type={this.state.expand ? 'up' : 'down'} />
-            </a>
           </Col>
         </Row>
       </Form>
