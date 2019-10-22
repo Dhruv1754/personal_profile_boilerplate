@@ -47,7 +47,7 @@ Important technologies used
 * To clean previously built assets
  	>npm run clean
 
-### Template Page 1
+### Template Page Link: https://mern--boilerplate.herokuapp.com/
 ----------
 This includes an Antd Form with redux integrated which can communicate to back end edit mongo db hosted at your choice of url.
 
