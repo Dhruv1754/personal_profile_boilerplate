@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf server/public/*/*.*",
     "start": "cross-env NODE_ENV=production node index.js",
-    "build": "npm run clean && webpack --config ./client/webpack.production --progress && cross-env NODE_ENV=production node index.js",
+    "build": "npm run clean && webpack --config ./client/webpack.production --progress",
     "serve": "cross-env NODE_ENV=production node index.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
