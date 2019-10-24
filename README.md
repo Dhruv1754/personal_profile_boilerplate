@@ -1,7 +1,7 @@
 # MERN Isomorphic Webpack 2 Boilerplate based on [ant.design](https://ant.design)
 ----------
-### Author
-Dhruv Mahajan 
+### Author and Purpose
+This project was made to help fellow students I was tutoring to start building a MERN stack application without having to build it from scratch. It is bootstrapped from create react app and has added feature for customizability to a full stack.- Dhruv Mahajan 
 
 ### About
 ----------
